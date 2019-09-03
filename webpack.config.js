@@ -21,23 +21,23 @@ module.exports = {
 		rules: [
 			{
 				enforce: "pre",
-				test: /\.(js)$/,
+				test: /\.(js|jsx)$/,
 				include: [path.resolve(__dirname, 'src')],
 				use: "eslint-loader",
 				resolve: {
-					extensions: ['.js']
+					extensions: ['.js', '.jsx']
 				}
 			},
 			{
-				test: /\.(js)$/,
+				test: /\.(js|jsx)$/,
 				include: [path.resolve(__dirname, 'src')],
 				loader: 'babel-loader',
 				options: {
 					plugins: ['syntax-dynamic-import'],
-					presets: ['@babel/preset-env']
+					presets: ['@babel/preset-env', '@babel/preset-react']
 				},
 				resolve: {
-					extensions: ['.js']
+					extensions: ['.js', '.jsx']
 				}
 			},
 			{
