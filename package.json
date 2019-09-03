@@ -10,7 +10,9 @@
     "test": "jest"
   },
   "scripts": {
-    "build": "webpack",
+    "clean": "rm -r dist/*",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p --mode production",
     "test": "jest",
     "start": "webpack-dev-server"
   },
@@ -37,6 +39,8 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "css-loader": "^3.2.0",
+    "eslint": "^6.3.0",
+    "eslint-loader": "^3.0.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
     "node-sass": "^4.12.0",
