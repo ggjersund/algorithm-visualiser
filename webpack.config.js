@@ -14,40 +14,40 @@ module.exports = {
 		new webpack.ProgressPlugin(),
 		new HtmlWebpackPlugin({
 			template: "./src/index.html",
-      filename: "./index.html"
+			filename: "./index.html"
 		})
 	],
 	module: {
 		rules: [
 			{
-        enforce: "pre",
-        test: /\.(js|jsx)$/,
+				enforce: "pre",
+				test: /\.(js|jsx)$/,
 				include: [path.resolve(__dirname, 'src')],
-        use: "eslint-loader",
+				use: "eslint-loader",
 				resolve: {
-			    extensions: ['.js', '.jsx']
-			  }
-      },
+					extensions: ['.js', '.jsx']
+				}
+			},
 			{
 				test: /\.(js|jsx)$/,
 				include: [path.resolve(__dirname, 'src')],
 				loader: 'babel-loader',
 				options: {
 					plugins: ['syntax-dynamic-import'],
-				  presets: ['@babel/preset-env', '@babel/preset-react']
+					presets: ['@babel/preset-env', '@babel/preset-react']
 				},
 				resolve: {
-			    extensions: ['.js', '.jsx']
-			  }
+					extensions: ['.js', '.jsx']
+				}
 			},
 			{
-        test: /\.s[ac]ss$/i,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
-      },
+				test: /\.s[ac]ss$/i,
+				use: [
+					'style-loader',
+					'css-loader',
+					'sass-loader',
+				],
+			},
 		]
 	},
 	optimization: {
