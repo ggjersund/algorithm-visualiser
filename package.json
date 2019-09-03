@@ -1,0 +1,29 @@
+{
+  "name": "sorting-algorithms",
+  "version": "0.0.1",
+  "description": "Javascript visualiser for the common sorting algorithms",
+  "main": "src/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggjersund/sorting-algorithms.git"
+  },
+  "keywords": [
+    "javascript",
+    "visualiser",
+    "sorting",
+    "algorithms"
+  ],
+  "author": "Gjert Ingar Gjersund",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ggjersund/sorting-algorithms/issues"
+  },
+  "homepage": "https://github.com/ggjersund/sorting-algorithms#readme"
+}
