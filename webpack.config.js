@@ -23,7 +23,10 @@ module.exports = {
         enforce: "pre",
         test: /\.(js|jsx)$/,
 				include: [path.resolve(__dirname, 'src')],
-        use: "eslint-loader"
+        use: "eslint-loader",
+				resolve: {
+			    extensions: ['.js', '.jsx']
+			  }
       },
 			{
 				test: /\.(js|jsx)$/,
@@ -31,8 +34,11 @@ module.exports = {
 				loader: 'babel-loader',
 				options: {
 					plugins: ['syntax-dynamic-import'],
-				  presets: ['@babel/preset-env']
-				}
+				  presets: ['@babel/preset-env', '@babel/preset-react']
+				},
+				resolve: {
+			    extensions: ['.js', '.jsx']
+			  }
 			},
 			{
         test: /\.s[ac]ss$/i,

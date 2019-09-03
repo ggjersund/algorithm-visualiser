@@ -1,5 +1,3 @@
-import consoleLog from './test.js';
-import style from './static/css/spreadsheet.scss';
+import App from "./components/App";
 
-consoleLog();
-console.log("Hello World from your main file!");
+App();
