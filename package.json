@@ -2,13 +2,16 @@
   "name": "sorting-algorithms",
   "version": "0.0.1",
   "description": "Javascript visualiser for the common sorting algorithms",
-  "main": "src/index.js",
+  "private": true,
+  "main": "dist/main.js",
   "directories": {
     "doc": "docs",
-    "test": "test"
+    "lib": "dist",
+    "test": "jest"
   },
   "scripts": {
-    "test": "test"
+    "build": "webpack",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,5 +28,10 @@
   "bugs": {
     "url": "https://github.com/ggjersund/sorting-algorithms/issues"
   },
-  "homepage": "https://github.com/ggjersund/sorting-algorithms#readme"
+  "homepage": "https://github.com/ggjersund/sorting-algorithms#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
 }
